@@ -26,12 +26,12 @@
 
 ### 四大调试面板
 
-| 面板 | 功能描述 |
-|------|----------|
-| **Abilities** | 显示已授予的技能列表、状态、冷却时间、输入 ID |
-| **Effects** | 显示活动的 Gameplay Effect、持续时间、层数、修改器 |
-| **Tags** | 显示当前拥有的 Gameplay Tags（层级树形结构）和被阻止的标签 |
-| **Attributes** | 显示所有属性集的基础值和当前值，支持搜索筛选 |
+| 面板           | 功能描述                                                   |
+| -------------- | ---------------------------------------------------------- |
+| **Abilities**  | 显示已授予的技能列表、状态、冷却时间、输入 ID              |
+| **Effects**    | 显示活动的 Gameplay Effect、持续时间、层数、修改器         |
+| **Tags**       | 显示当前拥有的 Gameplay Tags（层级树形结构）和被阻止的标签 |
+| **Attributes** | 显示所有属性集的基础值和当前值，支持搜索筛选               |
 
 ### 智能选择系统
 - World 选择器：支持 Server/Client/Standalone 多世界选择
@@ -76,16 +76,18 @@
 
 ## 界面说明
 
+![alt text](image.png)
+
 ### Abilities 面板
 
 以树形结构显示已授予的技能：
 
-| 列 | 说明 |
-|----|------|
-| Name | 技能类名（点击可跳转到资源） |
-| State | 技能状态（Ready/Active/Cooldown/Blocked） |
-| IsActive | 是否正在激活 |
-| Triggers | 技能触发器 |
+| 列       | 说明                                      |
+| -------- | ----------------------------------------- |
+| Name     | 技能类名（点击可跳转到资源）              |
+| State    | 技能状态（Ready/Active/Cooldown/Blocked） |
+| IsActive | 是否正在激活                              |
+| Triggers | 技能触发器                                |
 
 **状态颜色编码**：
 - 绿色：Ready（就绪）
@@ -97,14 +99,14 @@
 
 以树形结构显示活动的 Gameplay Effect：
 
-| 列 | 说明 |
-|----|------|
-| Name | 效果类名 |
-| Duration | 持续时间进度条（无限效果显示 ∞） |
-| Stack | 叠加层数 |
-| Level | 效果等级 |
-| Prediction | 是否为预测效果 |
-| Tags | 效果授予的标签 |
+| 列         | 说明                             |
+| ---------- | -------------------------------- |
+| Name       | 效果类名                         |
+| Duration   | 持续时间进度条（无限效果显示 ∞） |
+| Stack      | 叠加层数                         |
+| Level      | 效果等级                         |
+| Prediction | 是否为预测效果                   |
+| Tags       | 效果授予的标签                   |
 
 展开效果节点可查看其包含的修改器详情。
 
@@ -120,10 +122,10 @@
 
 按 AttributeSet 分组显示属性：
 
-| 列 | 说明 |
-|----|------|
-| Name | 属性名称 |
-| Base Value | 基础值 |
+| 列            | 说明               |
+| ------------- | ------------------ |
+| Name          | 属性名称           |
+| Base Value    | 基础值             |
 | Current Value | 当前值（含修改器） |
 
 **变化颜色编码**：
@@ -158,14 +160,14 @@
 
 ### 核心类说明
 
-| 类名 | 职责 |
-|------|------|
-| `FGASDebuggerModule` | 插件模块，管理窗口注册和生命周期 |
-| `FGASDebuggerWindowInstance` | 窗口实例，封装单个调试窗口的状态 |
-| `FGASDebuggerSharedState` | 共享状态管理，处理 World/Actor 选择和事件广播 |
-| `FGASDataProvider` | 静态工具类，从 ASC 提取各类 GAS 数据 |
-| `SGASDebuggerMainWindow` | 主窗口 Widget，包含选择器和标签页容器 |
-| `SGASDebuggerTabBase` | 标签页基类，提供通用的状态订阅机制 |
+| 类名                         | 职责                                          |
+| ---------------------------- | --------------------------------------------- |
+| `FGASDebuggerModule`         | 插件模块，管理窗口注册和生命周期              |
+| `FGASDebuggerWindowInstance` | 窗口实例，封装单个调试窗口的状态              |
+| `FGASDebuggerSharedState`    | 共享状态管理，处理 World/Actor 选择和事件广播 |
+| `FGASDataProvider`           | 静态工具类，从 ASC 提取各类 GAS 数据          |
+| `SGASDebuggerMainWindow`     | 主窗口 Widget，包含选择器和标签页容器         |
+| `SGASDebuggerTabBase`        | 标签页基类，提供通用的状态订阅机制            |
 
 ### 数据流
 
